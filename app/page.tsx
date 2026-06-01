@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Box, Monitor, Video, ArrowRight, Sparkles, Microscope, Layers } from "lucide-react";
 
 const molecularImage =
@@ -161,18 +162,18 @@ export default function Home() {
           <h2>From scientific detail to production polish.</h2>
         </div>
         <div className="showcase-grid">
-          <article>
+          <Link className="showcase-card" href="/medical-explainers">
             <Image src="/assets/medshot010-1024x559.png" alt="Medical 3D render scene" width={1024} height={559} />
             <span>
               <Microscope size={18} /> Medical explainers
             </span>
-          </article>
-          <article>
+          </Link>
+          <Link className="showcase-card" href="/product-mechanisms">
             <Image src="/assets/mechFlower-1024x559.png" alt="Mechanical flower 3D render" width={1024} height={559} />
             <span>
               <Layers size={18} /> Product mechanisms
             </span>
-          </article>
+          </Link>
         </div>
       </section>
 

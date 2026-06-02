@@ -253,6 +253,7 @@ h3 {
 
 .hero-contact-button {
   background: var(--orange);
+  border-color: var(--white);
   color: var(--white);
 }
 
@@ -953,7 +954,7 @@ h3 {
     transform: translateY(-7px) rotate(-45deg);
   }
 
-  nav {
+  .site-header nav {
     background: var(--white);
     border-top: 1px solid var(--line);
     display: none;
@@ -966,12 +967,12 @@ h3 {
     display: grid;
   }
 
-  nav a {
+  .site-header nav a {
     padding: 14px 0;
     width: 100%;
   }
 
-  nav a::before {
+  .site-header nav a::before {
     left: 0;
     width: 100%;
   }
@@ -1064,7 +1065,7 @@ h3 {
     right: 28px;
   }
 
-  nav a {
+  .site-header nav a {
     font-size: 14px;
     padding-bottom: 8px;
     padding-top: 8px;

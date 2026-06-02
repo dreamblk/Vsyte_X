@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Box, Monitor, Video, ArrowRight, Sparkles, Microscope, Layers } from "lucide-react";
+import { Box, Monitor, Video, ArrowRight, Microscope, Layers } from "lucide-react";
+import ContactForm from "./components/ContactForm";
 
 const molecularImage =
   "/assets/dreamblk72_antibodies_at_the_molecular_level_-ar_43_-styliz_9853224e-2334-4c9b-ab2d-54d41e340e7a_2-1024x771.png";
@@ -34,7 +35,7 @@ const navigation = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Case Studies", href: "#case-studies" },
-  { label: "Contact", href: "#contact" }
+  { label: "Contact", href: "#contact-form" }
 ];
 
 export default function Home() {
@@ -71,7 +72,7 @@ export default function Home() {
             <a className="button button-light" href="#about">
               Learn more
             </a>
-            <a className="button button-warm" href="#contact">
+            <a className="button button-warm hero-contact-button" href="#contact-form">
               Contact
             </a>
           </div>
@@ -93,11 +94,6 @@ export default function Home() {
             better understand diagnoses, treatments, and procedures, empowering informed health decisions with
             confidence.
           </p>
-          <div className="proof-strip" aria-label="VSYTE strengths">
-            <span>3D</span>
-            <span>VFX</span>
-            <span>Web</span>
-          </div>
         </div>
         <div className="feature-media">
           <Image src={molecularImage} alt="Colorful 3D molecular visualization" width={1024} height={771} />
@@ -121,7 +117,7 @@ export default function Home() {
               </div>
               <h3>{title}</h3>
               <p>{text}</p>
-              <a href="#contact" aria-label={`Learn more about ${title}`}>
+              <a href="#contact-form" aria-label={`Learn more about ${title}`}>
                 Learn more <ArrowRight size={15} />
               </a>
             </article>
@@ -139,7 +135,6 @@ export default function Home() {
           />
         </div>
         <div className="why-card">
-          <Sparkles size={26} aria-hidden="true" />
           <h2>Why Choose Us</h2>
           <p>
             VSYTE is a VFX studio focused on visual communication for the medical and technical professions. Our
@@ -150,7 +145,7 @@ export default function Home() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <a className="button button-light" href="#contact">
+          <a className="button button-light" href="#contact-form">
             Let&apos;s talk
           </a>
         </div>
@@ -182,10 +177,15 @@ export default function Home() {
           <Image src="/assets/vsyte-logo_WHT_340_100.png" alt="VSYTE" width={136} height={40} />
           <h2>Ready to make the complex visible?</h2>
           <p>Bring us the thing that is hard to explain. We&apos;ll turn it into visual insight your audience can use.</p>
-          <a className="button button-warm filled" href="mailto:hello@vsyte.com">
+          <a className="button button-warm filled" href="#contact-form">
             Start a project
           </a>
         </div>
+      </section>
+
+      <section id="contact-form" className="contact-modal" aria-label="Contact form popup">
+        <a className="contact-modal-backdrop" href="#home" aria-label="Close contact form" />
+        <ContactForm />
       </section>
 
       <footer className="site-footer">
@@ -199,14 +199,14 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
-            <a href="#contact">Contact</a>
+            <a href="#contact-form">Contact</a>
           </nav>
           <div className="footer-rule" />
           <div className="footer-bottom">
             <p>© Vsyte 2026 | All Rights Reserved.</p>
             <div className="footer-legal">
-              <a href="#contact">Privacy Policy</a>
-              <a href="#contact">Terms and Conditions</a>
+              <a href="#contact-form">Privacy Policy</a>
+              <a href="#contact-form">Terms and Conditions</a>
             </div>
           </div>
         </div>
